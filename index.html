@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="description" content="Portfólio de Bruno Cartolano, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor front-end." />
+    <meta name="author" content="Bruno Cartolano dos Santos" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bruno Cartolano | Desenvolvedor Front-end" />
+    <meta property="og:description" content="Portfólio de Bruno Cartolano, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor front-end." />
+    <meta property="og:image" content="public/bruno.jpg" />
+
+    <title>Bruno Cartolano | Desenvolvedor Front-end</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2360A5FA'/%3E%3Ctext x='50' y='66' font-size='52' font-family='Manrope,sans-serif' font-weight='700' fill='%230F172A' text-anchor='middle'%3EBC%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb--1"></span>
+      <span class="orb orb--2"></span>
+    </div>
+
+    <a href="#top" class="skip-link" data-i18n="a11y.skip">Pular para o conteúdo</a>
+
+    <header class="nav" id="nav">
+      <a href="#top" class="nav__logo" aria-label="Bruno Cartolano · Início">
+        <span class="nav__logo-mark" aria-hidden="true">BC</span>
+        <span class="nav__logo-text">Bruno Cartolano</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#contato" data-i18n="nav.contact">Contato</a>
+      </nav>
+
+      <div class="lang-switcher" role="group" data-i18n-aria="lang.group" aria-label="Selecionar idioma">
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="true" aria-label="Alterar idioma para português">PT</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Change language to English">EN</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" aria-label="Cambia lingua in italiano">IT</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" aria-label="Changer la langue en français">FR</button>
+      </div>
+
+      <a class="btn btn--primary nav__cta" href="https://wa.me/5512996010949" target="_blank" rel="noopener" data-i18n-aria="aria.whatsapp" aria-label="Falar comigo no WhatsApp">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.6L2 22l4.5-1.5A11 11 0 1 0 20.5 3.5Zm-3.3 13.8c-.3.8-1.4 1.5-2 1.6-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.7-1.2-3.2s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 2 .1.1.1.3 0 .5-.1.2-.2.3-.3.5l-.4.4c-.1.1-.2.3-.1.5.1.3.6 1.2 1.4 2 1 1 1.9 1.3 2.2 1.4.3.1.4 0 .5-.1.1-.2.6-.7.7-.9.1-.2.3-.2.5-.1l1.7.8c.3.1.4.2.5.4 0 .1 0 1-.3 1.7Z"/></svg>
+        <span data-i18n="nav.cta">Falar comigo</span>
+      </a>
+
+      <button class="nav__hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Navegação móvel">
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#contato" data-i18n="nav.contact">Contato</a>
+
+        <div class="lang-switcher lang-switcher--mobile" role="group" data-i18n-aria="lang.group" aria-label="Selecionar idioma">
+          <button type="button" class="lang-btn" data-lang="pt" aria-pressed="true" aria-label="Alterar idioma para português">PT</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Change language to English">EN</button>
+          <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" aria-label="Cambia lingua in italiano">IT</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" aria-label="Changer la langue en français">FR</button>
+        </div>
+
+        <a class="btn btn--primary" href="https://wa.me/5512996010949" target="_blank" rel="noopener" data-i18n="nav.cta">Falar comigo</a>
+      </nav>
+    </div>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <span class="hero__pretitle reveal">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-i18n="hero.pretitle">Estudante de ADS · Front-end · Construindo projetos reais</span>
+          </span>
+
+          <h1 id="hero-title" class="hero__title reveal">
+            <span data-i18n="hero.greeting">Oi, eu sou</span>
+            <span class="accent-text" data-i18n="hero.name">Bruno Cartolano.</span>
+          </h1>
+
+          <p class="hero__lead reveal" data-i18n="hero.lead">
+            Desenvolvo projetos web com foco em clareza, utilidade e boa experiência.
+          </p>
+
+          <p class="hero__subtitle reveal" data-i18n="hero.subtitle">
+            Sou estudante de Análise e Desenvolvimento de Sistemas e venho transformando
+            estudo em prática através de projetos reais, com atenção ao visual,
+            organização e qualidade da interface.
+          </p>
+
+          <div class="hero__ctas reveal">
+            <a class="btn btn--primary btn--lg" href="#projetos">
+              <span data-i18n="hero.cta.projects">Ver projetos</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="https://wa.me/5512996010949" target="_blank" rel="noopener" data-i18n-aria="aria.whatsapp" aria-label="Falar comigo no WhatsApp" data-i18n="hero.cta.contact">
+              Falar comigo
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__photo reveal">
+          <div class="profile">
+            <span class="profile__glow" aria-hidden="true"></span>
+            <span class="profile__placeholder" aria-hidden="true">BC</span>
+            <img
+              class="profile__img"
+              src="public/bruno.jpg"
+              alt="Foto de Bruno Cartolano"
+              loading="eager"
+              fetchpriority="high"
+              width="420"
+              height="420"
+              onerror="this.classList.add('profile__img--missing')"
+            />
+            <span class="profile__ring" aria-hidden="true"></span>
+          </div>
+          <p class="profile__caption" data-i18n="hero.caption">
+            Estudante de ADS • Front-end • São José dos Campos – SP
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="sobre" aria-labelledby="sobre-title">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.eyebrow">SOBRE</span>
+          <h2 id="sobre-title" data-i18n="about.heading">Um pouco sobre como eu trabalho.</h2>
+        </div>
+
+        <div class="about reveal">
+          <p data-i18n="about.p1">
+            Tenho me dedicado a evoluir como desenvolvedor front-end, estudando e aplicando na
+            prática conceitos de interface, organização de código e construção de sistemas web.
+            Meu objetivo é criar produtos úteis, bem pensados e agradáveis de usar.
+          </p>
+          <p data-i18n="about.p2">
+            Acredito que código bom é aquele que entrega valor real para quem usa. Por isso
+            tento equilibrar a parte técnica com cuidado em produto, acessibilidade e
+            experiência — mesmo nos projetos mais simples.
+          </p>
+        </div>
+
+        <ul class="about-cards reveal" aria-label="Como eu me posiciono">
+          <li class="about-card">
+            <span class="about-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </span>
+            <strong data-i18n="about.card1.title">Em formação em ADS</strong>
+            <span data-i18n="about.card1.desc">Curso de Análise e Desenvolvimento de Sistemas em andamento.</span>
+          </li>
+
+          <li class="about-card">
+            <span class="about-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <strong data-i18n="about.card2.title">Foco em front-end</strong>
+            <span data-i18n="about.card2.desc">Interfaces modernas, responsivas e organizadas com React e Next.</span>
+          </li>
+
+          <li class="about-card">
+            <span class="about-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.4 8 10 4.5-.6 8-5 8-10V6l-8-4Z"/></svg>
+            </span>
+            <strong data-i18n="about.card3.title">Projetos com propósito</strong>
+            <span data-i18n="about.card3.desc">Prefiro construir coisas que ajudem alguém de verdade.</span>
+          </li>
+
+          <li class="about-card">
+            <span class="about-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+            </span>
+            <strong data-i18n="about.card4.title">Estudo aplicado na prática</strong>
+            <span data-i18n="about.card4.desc">Cada conceito que aprendo vira um pedaço de projeto real.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="projetos" aria-labelledby="projetos-title">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="featured.eyebrow">PROJETO EM DESTAQUE</span>
+          <h2 id="projetos-title" data-i18n="featured.title">Sophia — apoio e informação para mães no puerpério</h2>
+          <p class="section__lead" data-i18n="featured.lead">
+            A Sophia nasceu da ideia de criar um espaço de apoio, acolhimento e informação
+            para mães no puerpério, com uma experiência segura, sensível e fácil de usar.
+          </p>
+        </div>
+
+        <article class="featured reveal">
+          <figure class="featured__media">
+            <div class="featured__media-frame">
+              <img
+                src="assets/img/sophia-mae-bebe.png"
+                alt="Ilustração de uma mãe acolhendo seu bebê — capa do projeto Sophia"
+                loading="lazy"
+                width="1024"
+                height="1024"
+              />
+            </div>
+            <div class="featured__media-glow" aria-hidden="true"></div>
+            <figcaption class="featured__media-caption" data-i18n="featured.imageCaption">
+              ILUSTRAÇÃO CONCEITUAL DO PROJETO
+            </figcaption>
+          </figure>
+
+          <div class="featured__body">
+            <div class="featured__head">
+              <div class="featured__tags" aria-label="Tecnologias usadas">
+                <span class="tag">Next.js</span>
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Prisma</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">Zod</span>
+              </div>
+              <span class="featured__badge" aria-label="Status do projeto">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="featured.badge">Projeto em desenvolvimento</span>
+              </span>
+            </div>
+
+            <p class="featured__intro" data-i18n="featured.intro">
+              Um estudo de caso pessoal — desde o motivo de existir até as decisões técnicas e o que vem por aí.
+            </p>
+
+            <ol class="case" aria-label="Estudo de caso da Sophia">
+              <li class="case__item">
+                <span class="case__num" aria-hidden="true">01</span>
+                <div>
+                  <h3 data-i18n="featured.case.01.title">Por que criei</h3>
+                  <p data-i18n="featured.case.01.desc">
+                    Quis construir algo que tivesse uma utilidade real e que dialogasse
+                    com um contexto sensível. Saúde materna no puerpério é um espaço onde
+                    informação confiável e tom acolhedor fazem diferença concreta.
+                  </p>
+                </div>
+              </li>
+
+              <li class="case__item">
+                <span class="case__num" aria-hidden="true">02</span>
+                <div>
+                  <h3 data-i18n="featured.case.02.title">O problema</h3>
+                  <p data-i18n="featured.case.02.desc">
+                    O pós-parto é um período de muitas dúvidas e vulnerabilidade. A proposta
+                    da Sophia é oferecer um ambiente organizado, acolhedor e informativo —
+                    sem substituir profissionais de saúde.
+                  </p>
+                </div>
+              </li>
+
+              <li class="case__item case__item--accent">
+                <span class="case__num" aria-hidden="true">03</span>
+                <div>
+                  <h3 data-i18n="featured.case.03.title">A decisão técnica</h3>
+                  <p data-i18n="featured.case.03.desc">
+                    Optei por uma abordagem baseada em regras, com respostas previsíveis e
+                    auditáveis, priorizando segurança, clareza e responsabilidade no contexto
+                    de saúde materna. Em vez de modelos generativos, motor curado com
+                    detecção de intenção e protocolo de crise.
+                  </p>
+                </div>
+              </li>
+
+              <li class="case__item">
+                <span class="case__num" aria-hidden="true">04</span>
+                <div>
+                  <h3 data-i18n="featured.case.04.title">O que já está pronto</h3>
+                  <ul class="case__list">
+                    <li data-i18n="featured.case.04.item1">Conversa acolhedora com detecção de intenção e protocolo de crise</li>
+                    <li data-i18n="featured.case.04.item2">Biblioteca de conteúdo curado com referências de fontes oficiais</li>
+                    <li data-i18n="featured.case.04.item3">Cadastro com verificação de e-mail por código e sessão segura</li>
+                    <li data-i18n="featured.case.04.item4">Consentimento granular e fluxo de exclusão de dados (LGPD)</li>
+                    <li data-i18n="featured.case.04.item5">Design system próprio, totalmente responsivo</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="case__item">
+                <span class="case__num" aria-hidden="true">05</span>
+                <div>
+                  <h3 data-i18n="featured.case.05.title">Próximos passos</h3>
+                  <p data-i18n="featured.case.05.desc">
+                    Refinar a experiência, testar com usuárias, revisar conteúdo e preparar
+                    uma versão pública mais segura e estável.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="featured__status" role="note">
+              <span class="featured__status-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <p data-i18n="featured.statusNote">
+                A demo pública e o repositório ainda não estão disponíveis, pois o
+                projeto está em fase de evolução.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="outros-title">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="other.eyebrow">OUTROS PROJETOS</span>
+          <h2 id="outros-title" data-i18n="other.heading">O que vem por aí.</h2>
+        </div>
+
+        <div class="grid-projects">
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </span>
+            <h3 data-i18n="other.card1.title">Novos projetos em breve</h3>
+            <p data-i18n="other.card1.desc">
+              Estou organizando meus próximos projetos para mostrar aqui com mais contexto,
+              imagens e explicação do processo.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/></svg>
+            </span>
+            <h3 data-i18n="other.card2.title">Estudos aplicados</h3>
+            <p data-i18n="other.card2.desc">
+              Também quero registrar experimentos, interfaces e aprendizados que fazem parte
+              da minha evolução como desenvolvedor.
+            </p>
+          </article>
+
+          <article class="card card--accent reveal">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <h3 data-i18n="other.card3.title">Tem uma ideia?</h3>
+            <p data-i18n="other.card3.desc">
+              Se você precisa de uma landing page, site institucional ou interface simples,
+              posso conversar sobre o projeto.
+            </p>
+            <a href="https://wa.me/5512996010949" target="_blank" rel="noopener" class="card__link" data-i18n-aria="aria.whatsapp" aria-label="Falar comigo no WhatsApp sobre uma ideia">
+              <span data-i18n="other.card3.cta">Iniciar conversa</span> →
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="stack" aria-labelledby="stack-title">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="stack.eyebrow">STACK</span>
+          <h2 id="stack-title" data-i18n="stack.heading">Ferramentas que estou usando e estudando.</h2>
+          <p class="section__lead" data-i18n="stack.lead">
+            Minha stack está evoluindo junto com meus projetos. Hoje meu foco está em
+            construir interfaces organizadas, responsivas e fáceis de manter.
+          </p>
+        </div>
+
+        <div class="stack reveal">
+          <div class="stack__group">
+            <h4 data-i18n="stack.frontend">Front-end</h4>
+            <ul>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.frontend.1">React e Next.js</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.frontend.2">TypeScript</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.frontend.3">Tailwind CSS</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.frontend.4">HTML semântico e CSS moderno</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.frontend.5">JavaScript ES6+</span></li>
+            </ul>
+          </div>
+
+          <div class="stack__group">
+            <h4 data-i18n="stack.backend">Back-end leve</h4>
+            <ul>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.backend.1">Node.js (rotas e APIs)</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.backend.2">Prisma ORM</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.backend.3">SQLite e PostgreSQL</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.backend.4">Autenticação com JWT</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.backend.5">Validação com Zod</span></li>
+            </ul>
+          </div>
+
+          <div class="stack__group">
+            <h4 data-i18n="stack.practices">Boas práticas</h4>
+            <ul>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.practices.1">Mobile-first e responsividade</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.practices.2">Acessibilidade (a11y)</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.practices.3">Privacidade e LGPD</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.practices.4">Versionamento com Git</span></li>
+              <li><span class="stack__bullet" aria-hidden="true"></span> <span data-i18n="stack.practices.5">Deploy em Vercel e Netlify</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contato" aria-labelledby="contato-title">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="contact.eyebrow">CONTATO</span>
+          <h2 id="contato-title" data-i18n="contact.heading">Vamos conversar.</h2>
+          <p class="section__lead" data-i18n="contact.lead">
+            Gostou do meu trabalho ou quer trocar uma ideia sobre um projeto? Pode me chamar.
+            Vou ficar feliz em conversar.
+          </p>
+        </div>
+
+        <div class="contact reveal">
+          <a class="contact__card" href="https://wa.me/5512996010949" target="_blank" rel="noopener" data-i18n-aria="aria.whatsapp" aria-label="Falar comigo no WhatsApp (12) 99601-0949">
+            <span class="contact__icon contact__icon--whatsapp" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.6L2 22l4.5-1.5A11 11 0 1 0 20.5 3.5Zm-3.3 13.8c-.3.8-1.4 1.5-2 1.6-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.7-1.2-3.2s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 2 .1.1.1.3 0 .5-.1.2-.2.3-.3.5l-.4.4c-.1.1-.2.3-.1.5.1.3.6 1.2 1.4 2 1 1 1.9 1.3 2.2 1.4.3.1.4 0 .5-.1.1-.2.6-.7.7-.9.1-.2.3-.2.5-.1l1.7.8c.3.1.4.2.5.4 0 .1 0 1-.3 1.7Z"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="contact.whatsapp">WhatsApp</strong>
+              <span>+55 (12) 99601-0949</span>
+            </div>
+          </a>
+
+          <a class="contact__card" href="mailto:bruno.santos.cartolano@gmail.com" data-i18n-aria="aria.email" aria-label="Enviar e-mail para bruno.santos.cartolano@gmail.com">
+            <span class="contact__icon contact__icon--mail" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="contact.email">E-mail</strong>
+              <span class="contact__email">
+                <span class="email-line">bruno.santos.cartolano</span>
+                <span class="email-line">@gmail.com</span>
+              </span>
+            </div>
+          </a>
+
+          <a class="contact__card" href="https://www.instagram.com/cartolano.bruno/" target="_blank" rel="noopener" data-i18n-aria="aria.instagram" aria-label="Instagram @cartolano.bruno">
+            <span class="contact__icon contact__icon--instagram" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4Z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="contact.instagram">Instagram</strong>
+              <span>@cartolano.bruno</span>
+            </div>
+          </a>
+
+          <a class="contact__card" href="https://github.com/BCartolano" target="_blank" rel="noopener" data-i18n-aria="aria.github" aria-label="GitHub BCartolano">
+            <span class="contact__icon contact__icon--github" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 2-.4 3-.4s2.1.1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5Z"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="contact.github">GitHub</strong>
+              <span>github.com/BCartolano</span>
+            </div>
+          </a>
+
+          <a class="contact__card" href="https://www.linkedin.com/in/bcartolano/" target="_blank" rel="noopener" data-i18n-aria="aria.linkedin" aria-label="LinkedIn de Bruno Cartolano">
+            <span class="contact__icon contact__icon--linkedin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8 17v-7H6v7h2Zm-1-8.3a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4ZM18 17v-3.8c0-2.1-1.1-3-2.7-3a2.3 2.3 0 0 0-2.1 1.1V10h-2v7h2v-3.6c0-1 .2-1.9 1.4-1.9s1.4 1.1 1.4 2V17h2Z"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="contact.linkedin">LinkedIn</strong>
+              <span>linkedin.com/in/bcartolano</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <p>
+          © <span id="year">2026</span>
+          <span data-i18n="footer.text">Bruno Cartolano dos Santos. Desenvolvido com HTML, CSS e JavaScript.</span>
+        </p>
+        <a href="#top" class="footer__top">
+          <span data-i18n="footer.top">Voltar ao topo</span> ↑
+        </a>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
