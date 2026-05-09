@@ -1,14 +1,18 @@
 # Portfólio · Bruno Cartolano
 
-Site one-page pessoal, dark, com identidade humana e madura. Construído com **HTML, CSS e JavaScript puros** — sem framework, sem build.
+Site one-page pessoal — dark, com identidade humana e madura. Construído com **HTML, CSS e JavaScript puros** (sem framework, sem build), pensado para carregar rápido e funcionar em qualquer dispositivo.
 
-Em destaque: **Sophia — apoio e informação para mães no puerpério** (Next.js, Prisma, autenticação completa, LGPD).
+> **Em destaque: Sophia** — apoio e informação para mães no puerpério. Aplicação completa em Next.js + Prisma, com autenticação, conformidade LGPD e cuidado real com a experiência de quem usa.
 
-**Recursos:**
-- 4 idiomas com troca instantânea: 🇧🇷 PT · 🇬🇧 EN · 🇮🇹 IT · 🇫🇷 FR (preferência salva no `localStorage`)
-- Totalmente responsivo: testado em 360, 390, 430, 768 e desktop
-- Menu hambúrguer acessível no mobile (com `aria-expanded` e fechamento por `Esc`)
-- Acessibilidade: foco visível, contraste adequado, `prefers-reduced-motion`
+---
+
+## Recursos
+
+- **4 idiomas** com troca instantânea: 🇧🇷 PT · 🇬🇧 EN · 🇮🇹 IT · 🇫🇷 FR (preferência salva no `localStorage`)
+- **Totalmente responsivo:** testado em 360, 390, 430, 768 e desktop
+- **Menu acessível** no mobile (com `aria-expanded` e fechamento por `Esc`)
+- **Acessibilidade:** foco visível, contraste adequado, suporte a `prefers-reduced-motion`
+- **Performance:** sem dependências, sem build step, sem JavaScript pesado
 
 ---
 
@@ -41,11 +45,11 @@ Microinterações discretas: hover suave em cards, fade in ao rolar, foco visív
 
 ## Contato
 
-- WhatsApp: [+55 (12) 99601-0949](https://wa.me/5512996010949)
-- E-mail: [bruno.santos.cartolano@gmail.com](mailto:bruno.santos.cartolano@gmail.com)
-- Instagram: [@cartolano.bruno](https://www.instagram.com/cartolano.bruno/)
-- GitHub: [BCartolano](https://github.com/BCartolano)
-- LinkedIn: [bcartolano](https://www.linkedin.com/in/bcartolano/)
+- **WhatsApp:** [+55 (12) 99601-0949](https://wa.me/5512996010949)
+- **E-mail:** [bruno.santos.cartolano@gmail.com](mailto:bruno.santos.cartolano@gmail.com)
+- **Instagram:** [@cartolano.bruno](https://www.instagram.com/cartolano.bruno/)
+- **GitHub:** [BCartolano](https://github.com/BCartolano)
+- **LinkedIn:** [bcartolano](https://www.linkedin.com/in/bcartolano/)
 
 ---
 
