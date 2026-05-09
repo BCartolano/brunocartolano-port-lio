@@ -1,8 +1,10 @@
 # Portfólio · Bruno Cartolano
 
+**[Ver site ao vivo →](https://brunocartolano-portfolio.onrender.com/)**
+
 Site one-page pessoal — dark, com identidade humana e madura. Construído com **HTML, CSS e JavaScript puros** (sem framework, sem build), pensado para carregar rápido e funcionar em qualquer dispositivo.
 
-> **Em destaque: Sophia** — apoio e informação para mães no puerpério. Aplicação completa em Next.js + Prisma, com autenticação, conformidade LGPD e cuidado real com a experiência de quem usa.
+> **Em destaque: [Sophia](https://github.com/BCartolano/assistente-puerperio)** — apoio e informação para mães no puerpério. Aplicação completa em Next.js + Prisma, com autenticação, conformidade LGPD e cuidado real com a experiência de quem usa.
 
 ---
 

@@ -58,7 +58,8 @@
       "featured.case.04.item5": "Design system próprio, totalmente responsivo",
       "featured.case.05.title": "Próximos passos",
       "featured.case.05.desc": "Refinar a experiência, testar com usuárias, revisar conteúdo e preparar uma versão pública mais segura e estável.",
-      "featured.statusNote": "A demo pública e o repositório ainda não estão disponíveis, pois o projeto está em fase de evolução.",
+      "featured.statusNote": "O repositório já está disponível no GitHub. A demo pública entra no ar em breve.",
+      "featured.cta.repo": "Ver no GitHub",
 
       "other.eyebrow": "OUTROS PROJETOS",
       "other.heading": "O que vem por aí.",
@@ -108,6 +109,7 @@
       "aria.email": "Enviar e-mail para bruno.santos.cartolano@gmail.com",
       "aria.instagram": "Instagram @cartolano.bruno",
       "aria.github": "GitHub BCartolano",
+      "aria.github.sophia": "Ver código da Sophia no GitHub",
       "aria.linkedin": "LinkedIn de Bruno Cartolano",
 
       "meta.title": "Bruno Cartolano | Desenvolvedor Front-end",
@@ -166,7 +168,8 @@
       "featured.case.04.item5": "Custom design system, fully responsive",
       "featured.case.05.title": "Next steps",
       "featured.case.05.desc": "Refine the experience, test with users, review the content and prepare a safer and more stable public version.",
-      "featured.statusNote": "The public demo and repository are not available yet, because the project is still evolving.",
+      "featured.statusNote": "The repository is now available on GitHub. A public demo is coming soon.",
+      "featured.cta.repo": "View on GitHub",
 
       "other.eyebrow": "OTHER PROJECTS",
       "other.heading": "What’s coming next.",
@@ -216,6 +219,7 @@
       "aria.email": "Send an e-mail to bruno.santos.cartolano@gmail.com",
       "aria.instagram": "Instagram @cartolano.bruno",
       "aria.github": "GitHub BCartolano",
+      "aria.github.sophia": "View Sophia's code on GitHub",
       "aria.linkedin": "Bruno Cartolano on LinkedIn",
 
       "meta.title": "Bruno Cartolano | Front-end Developer",
@@ -274,7 +278,8 @@
       "featured.case.04.item5": "Design system proprio, completamente responsive",
       "featured.case.05.title": "Prossimi passi",
       "featured.case.05.desc": "Rifinire l’esperienza, testare con utenti, revisionare i contenuti e preparare una versione pubblica più sicura e stabile.",
-      "featured.statusNote": "La demo pubblica e il repository non sono ancora disponibili, perché il progetto è in fase di evoluzione.",
+      "featured.statusNote": "Il repository è ora disponibile su GitHub. Una demo pubblica arriverà a breve.",
+      "featured.cta.repo": "Vedi su GitHub",
 
       "other.eyebrow": "ALTRI PROGETTI",
       "other.heading": "Cosa arriverà prossimamente.",
@@ -324,6 +329,7 @@
       "aria.email": "Invia un’e-mail a bruno.santos.cartolano@gmail.com",
       "aria.instagram": "Instagram @cartolano.bruno",
       "aria.github": "GitHub BCartolano",
+      "aria.github.sophia": "Vedi il codice di Sophia su GitHub",
       "aria.linkedin": "LinkedIn di Bruno Cartolano",
 
       "meta.title": "Bruno Cartolano | Sviluppatore Front-end",
@@ -382,7 +388,8 @@
       "featured.case.04.item5": "Design system propre, entièrement responsive",
       "featured.case.05.title": "Prochaines étapes",
       "featured.case.05.desc": "Affiner l’expérience, tester avec des utilisatrices, réviser le contenu et préparer une version publique plus sûre et stable.",
-      "featured.statusNote": "La démo publique et le dépôt ne sont pas encore disponibles, car le projet est en phase d’évolution.",
+      "featured.statusNote": "Le dépôt est désormais disponible sur GitHub. Une démo publique sera mise en ligne bientôt.",
+      "featured.cta.repo": "Voir sur GitHub",
 
       "other.eyebrow": "AUTRES PROJETS",
       "other.heading": "Ce qui arrive bientôt.",
@@ -432,6 +439,7 @@
       "aria.email": "Envoyer un e-mail à bruno.santos.cartolano@gmail.com",
       "aria.instagram": "Instagram @cartolano.bruno",
       "aria.github": "GitHub BCartolano",
+      "aria.github.sophia": "Voir le code de Sophia sur GitHub",
       "aria.linkedin": "LinkedIn de Bruno Cartolano",
 
       "meta.title": "Bruno Cartolano | Développeur Front-end",

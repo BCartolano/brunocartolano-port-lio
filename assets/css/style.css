@@ -1062,6 +1062,21 @@ main {
   color: var(--text-soft);
 }
 
+.featured__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.featured__actions .btn {
+  gap: 8px;
+}
+
+.featured__actions .btn svg {
+  flex-shrink: 0;
+}
+
 /* ==========================================================================
    Outros projetos
    ========================================================================== */
