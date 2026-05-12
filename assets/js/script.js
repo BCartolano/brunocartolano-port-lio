@@ -748,4 +748,194 @@
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
+
+  /* ==========================================================================
+     Click feedback — ripple, echo, press state
+     ========================================================================== */
+
+  const spawnRipple = (host, evt) => {
+    if (prefersReducedMotion) return;
+    const rect = host.getBoundingClientRect();
+    const ripple = document.createElement("span");
+    ripple.className = "click-ripple";
+    const cx = evt && Number.isFinite(evt.clientX)
+      ? evt.clientX - rect.left
+      : rect.width / 2;
+    const cy = evt && Number.isFinite(evt.clientY)
+      ? evt.clientY - rect.top
+      : rect.height / 2;
+    ripple.style.left = cx + "px";
+    ripple.style.top = cy + "px";
+    host.appendChild(ripple);
+    window.setTimeout(() => ripple.remove(), 600);
+  };
+
+  const spawnEcho = (evt, text, variant) => {
+    if (prefersReducedMotion) return;
+    const echo = document.createElement("span");
+    echo.className = "click-echo" + (variant ? " click-echo--" + variant : "");
+    echo.textContent = text;
+    const x = evt && Number.isFinite(evt.clientX)
+      ? evt.clientX
+      : window.innerWidth / 2;
+    const y = evt && Number.isFinite(evt.clientY)
+      ? evt.clientY
+      : window.innerHeight / 2;
+    echo.style.left = x + "px";
+    echo.style.top = y + "px";
+    document.body.appendChild(echo);
+    window.setTimeout(() => echo.remove(), 800);
+  };
+
+  const releasePressed = (host) => () => host.classList.remove("is-pressed");
+
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("pointerdown", (evt) => {
+      btn.classList.add("is-pressed");
+      spawnRipple(btn, evt);
+    });
+    ["pointerup", "pointerleave", "pointercancel", "blur"].forEach((type) => {
+      btn.addEventListener(type, releasePressed(btn));
+    });
+    btn.addEventListener("click", (evt) => {
+      const isPrimary = btn.classList.contains("btn--primary");
+      const isGhost = btn.classList.contains("btn--ghost");
+      if (isPrimary) {
+        spawnEcho(evt, "// ok", "");
+      } else if (isGhost) {
+        spawnEcho(evt, "// go", "blue");
+      }
+    });
+  });
+
+  document
+    .querySelectorAll(".card, .contact__card, .about-card")
+    .forEach((host) => {
+      host.addEventListener("pointerdown", () =>
+        host.classList.add("is-pressed")
+      );
+      ["pointerup", "pointerleave", "pointercancel", "blur"].forEach((type) => {
+        host.addEventListener(type, releasePressed(host));
+      });
+    });
+
+  /* ==========================================================================
+     Typewriter no nome do hero
+     ========================================================================== */
+
+  const accentEl = document.querySelector(".hero__title .accent-text");
+  let typewriterTimer = null;
+
+  const finishTypewriter = () => {
+    if (!accentEl) return;
+    if (typewriterTimer !== null) {
+      clearTimeout(typewriterTimer);
+      typewriterTimer = null;
+    }
+    accentEl.classList.add("typewriter", "is-done");
+    accentEl.dataset.typed = "1";
+  };
+
+  const runTypewriter = () => {
+    if (!accentEl) return;
+    if (accentEl.dataset.typed === "1") return;
+    if (prefersReducedMotion) {
+      finishTypewriter();
+      return;
+    }
+    const text = accentEl.textContent;
+    if (!text) return;
+    accentEl.textContent = "";
+    accentEl.classList.add("typewriter");
+    accentEl.dataset.typed = "running";
+    let i = 0;
+    const step = () => {
+      if (accentEl.dataset.typed !== "running") return;
+      if (i >= text.length) {
+        accentEl.classList.add("is-done");
+        accentEl.dataset.typed = "1";
+        typewriterTimer = null;
+        return;
+      }
+      accentEl.textContent += text.charAt(i);
+      i += 1;
+      typewriterTimer = window.setTimeout(step, 55 + Math.random() * 50);
+    };
+    typewriterTimer = window.setTimeout(step, 360);
+  };
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", finishTypewriter);
+  });
+
+  if (document.readyState === "complete") {
+    runTypewriter();
+  } else {
+    window.addEventListener("load", runTypewriter, { once: true });
+  }
+
+  /* ==========================================================================
+     Toast helper
+     ========================================================================== */
+
+  let toastEl = null;
+  let toastTimer = null;
+
+  const showToast = (text) => {
+    if (!toastEl) {
+      toastEl = document.createElement("div");
+      toastEl.className = "toast";
+      toastEl.setAttribute("role", "status");
+      toastEl.setAttribute("aria-live", "polite");
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = text;
+    requestAnimationFrame(() => toastEl.classList.add("is-visible"));
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => {
+      toastEl.classList.remove("is-visible");
+    }, 2400);
+  };
+
+  /* ==========================================================================
+     Easter egg — Konami code ativa modo CRT
+     ========================================================================== */
+
+  const KONAMI = [
+    "ArrowUp", "ArrowUp",
+    "ArrowDown", "ArrowDown",
+    "ArrowLeft", "ArrowRight",
+    "ArrowLeft", "ArrowRight",
+    "b", "a",
+  ];
+  let konamiIdx = 0;
+
+  const toggleCrtMode = () => {
+    const on = !document.body.classList.contains("crt-mode");
+    document.body.classList.toggle("crt-mode", on);
+    showToast(on ? "modo CRT ativado" : "modo CRT desativado");
+  };
+
+  window.addEventListener("keydown", (e) => {
+    const target = e.target;
+    if (
+      target &&
+      (target.tagName === "INPUT" ||
+        target.tagName === "TEXTAREA" ||
+        target.isContentEditable)
+    ) {
+      return;
+    }
+    const expected = KONAMI[konamiIdx];
+    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (key === expected) {
+      konamiIdx += 1;
+      if (konamiIdx === KONAMI.length) {
+        konamiIdx = 0;
+        toggleCrtMode();
+      }
+    } else {
+      konamiIdx = key === KONAMI[0] ? 1 : 0;
+    }
+  });
 })();
